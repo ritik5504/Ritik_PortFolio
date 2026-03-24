@@ -12,7 +12,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "composite": true,
+    "skipLibCheck": true,        // <-- ignore 3rd-party type errors
     "declaration": true,
     "declarationMap": true,
     "noEmit": false
