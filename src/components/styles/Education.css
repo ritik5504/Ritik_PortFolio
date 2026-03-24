@@ -1,0 +1,132 @@
+/* ── Education Section ── */
+.education-section {
+    margin: auto;
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+    background-color: var(--backgroundColor);
+}
+
+.education-subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.education-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.education-card:hover {
+    background: rgba(94, 234, 212, 0.04);
+    border-color: rgba(94, 234, 212, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(94, 234, 212, 0.08);
+}
+
+.education-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accentColor), var(--accentColorAlt, #a78bfa));
+    border-radius: 4px 0 0 4px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.education-card:hover .education-card-accent {
+    opacity: 1;
+}
+
+.education-card-content {
+    padding: 30px 35px;
+}
+
+.education-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.education-card-content h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.education-card-content h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--accentColor);
+    margin: 6px 0;
+}
+
+.education-period {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.5;
+    white-space: nowrap;
+}
+
+.education-grade {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 14px;
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 20px;
+    color: var(--accentColorAlt, #a78bfa);
+    margin-top: 4px;
+}
+
+.education-card-content p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin: 12px 0 0;
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 900px) {
+    .education-section {
+        padding: 60px 0;
+    }
+
+    .education-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .education-card-content {
+        padding: 20px 25px;
+    }
+
+    .education-card-content h4 {
+        font-size: 18px;
+    }
+
+    .education-container {
+        width: calc(100% - 25px);
+    }
+}

@@ -1,0 +1,125 @@
+/* ── Achievements Section ── */
+.achievements-section {
+    margin: auto;
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+    background-color: var(--backgroundColor);
+}
+
+.achievements-subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+}
+
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.achievement-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 28px 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    background: rgba(94, 234, 212, 0.04);
+    border-color: rgba(94, 234, 212, 0.18);
+    transform: translateX(5px);
+    box-shadow: 0 5px 25px rgba(94, 234, 212, 0.06);
+}
+
+.achievement-icon {
+    font-size: 36px;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(94, 234, 212, 0.06);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-item:hover .achievement-icon {
+    transform: scale(1.1);
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.achievement-content h4 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.achievement-year {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.5;
+    white-space: nowrap;
+    padding: 3px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+}
+
+.achievement-content p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin: 8px 0 0;
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 900px) {
+    .achievements-section {
+        padding: 60px 0;
+    }
+
+    .achievement-item {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .achievement-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .achievement-content h4 {
+        font-size: 16px;
+    }
+
+    .achievement-icon {
+        font-size: 28px;
+        min-width: 42px;
+        height: 42px;
+    }
+
+    .achievements-container {
+        width: calc(100% - 25px);
+    }
+}
