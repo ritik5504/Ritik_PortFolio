@@ -1,4 +1,4 @@
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./styles/Navbar.css";
 export declare let smoother: ScrollSmoother;
 declare const Navbar: () => import("react/jsx-runtime").JSX.Element;
