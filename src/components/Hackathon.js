@@ -1,0 +1,18 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import "./styles/Hackathon.css";
+import { MdArrowOutward } from "react-icons/md";
+const hackathonData = [
+    {
+        name: "Build-a-Thon Hackathon",
+        year: "Dec 2025",
+        result: "5th Place",
+        project: "Full Stack Web Application",
+        description: "Competed in the Build-a-Thon Hackathon organized by Apna College at Lovely Professional University (LPU). Built a complete full-stack web application under time pressure, demonstrating rapid prototyping, teamwork, and problem-solving skills. Secured 5th place among numerous competing teams.",
+        tags: ["React.js", "Node.js", "MongoDB", "Express.js"],
+        link: "",
+    },
+];
+const Hackathon = () => {
+    return (_jsx("div", { className: "hackathon-section section-container", id: "hackathon", children: _jsxs("div", { className: "hackathon-container", children: [_jsx("h3", { className: "section-heading", children: "Hackathons" }), _jsx("p", { className: "hackathon-subtitle", children: "Building cool things under pressure" }), _jsx("div", { className: "hackathon-grid", children: hackathonData.map((hack, index) => (_jsxs("div", { className: "hackathon-card", children: [_jsxs("div", { className: "hackathon-card-top", children: [_jsx("div", { className: "hackathon-result", children: hack.result }), _jsx("span", { className: "hackathon-year", children: hack.year })] }), _jsx("h4", { className: "hackathon-name", children: hack.name }), _jsx("h5", { className: "hackathon-project", children: hack.project }), _jsx("p", { children: hack.description }), _jsx("div", { className: "hackathon-tags", children: hack.tags.map((tag, i) => (_jsx("span", { className: "hackathon-tag", children: tag }, i))) }), hack.link && hack.link !== "#" && (_jsxs("a", { href: hack.link, target: "_blank", className: "hackathon-link", "data-cursor": "disable", children: ["View Project ", _jsx(MdArrowOutward, {})] }))] }, index))) })] }) }));
+};
+export default Hackathon;
